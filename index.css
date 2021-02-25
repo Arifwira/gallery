@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/* NAVIGATION BAR */
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #929292;
+}
+h1{
+    position: relative;
+    color: #929292;
+   /* -webkit-text-stroke: 0.1vw #383d52;*/
+    font-size: 5vw;
+    transition: all 0.8s ease;
+
+}
+h1::before
+{
+
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: whitesmoke;
+    -webkit-text-stroke: 0vw whitesmoke;
+    border-right: 3px solid whitesmoke;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate {
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+.tombol{
+    transition-delay: 100ms;
+}
+a{
+    position: relative;
+    display: inline-block;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    background: #929292;
+    letter-spacing: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 125px;
+    height: 50px;
+    padding: 8px;
+
+}
+
+a:hover{
+    color: rgba(2255,255,255,1);
+}
+a span{
+    display: block;
+    position: absolute;
+    background: antiquewhite;
+}
+a span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+a:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+a span:nth-child(2){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+a:hover span:nth-child(2){
+    transform: scaleY(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+a span:nth-child(3){
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+a:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+a span:nth-child(4){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+a:hover span:nth-child(4){
+    transform: scaleY(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+p{
+    padding-bottom: 50px;
+}
