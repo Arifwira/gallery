@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/* NAVIGATION BAR */
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #929292;
+}
+header{
+    text-align: center;
+    padding: 50px;
+}
+main{
+    margin: 0 auto;
+    padding: 30px 20px;
+    min-height: calc(100vh - 119,2px -100px);
+}
+h1{
+    position: relative;
+    color: aliceblue;
+    /* -webkit-text-stroke: 0.1vw #383d52;*/
+    font-size: 5vw;
+    transition: all 0.8s ease;
+
+}
+footer{
+    text-align: center;
+    padding: 50px;
+}
